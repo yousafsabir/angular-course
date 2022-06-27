@@ -1,0 +1,48 @@
+<div>
+  <button
+    [disabled]="username === ''"
+    (click)="onClear()"
+    class="p-2 bg-blue-700 text-white rounded disabled:cursor-not-allowed"
+  >
+    Reset
+  </button>
+  <!-- <input type="text" (input)="onInput($event)" /> -->
+  <br />
+  <input type="text" (click)="onAddUsername($event)" />
+  <div>This is username {{ username }}</div>
+  <p *ngIf="allowNew; else marker">Allah - {{ allowNew ? "abc" : "def" }}</p>
+  <ng-template #marker>
+    <p>Zindabad</p>
+  </ng-template>
+  <button (click)="onShow()" class="p-2 bg-blue-700 text-white rounded">
+    Click to show
+  </button>
+  <p
+    [ngStyle]="{ backgroundColor: allowNew ? 'red' : 'green' }"
+    [ngClass]="{
+      'text-lg text-blue-200': allowNew,
+      'text-xs text-purple-800': !allowNew
+    }"
+  >
+    This background responds to allowNew boolean
+  </p>
+  <p>Looping through loop array</p>
+  <br />
+  <br />
+  <br />
+  <input
+    type="text"
+    [(ngModel)]="name"
+    class="border border-blue-900 rounded"
+  />
+  <br />
+  <input
+    type="number"
+    [(ngModel)]="age"
+    class="border border-blue-900 rounded mt-2"
+  />
+  <button (click)="onAdd()">Add User</button>
+  <div *ngFor="let item of data; let i = index">
+    <p>{{ i + 1 }}-Name is {{ item.name }} and the age is {{ item.age }}</p>
+  </div>
+</div>
