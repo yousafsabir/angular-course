@@ -1,0 +1,26 @@
+<header class="flex items-center justify-between p-3 shadow-md">
+  <div class="right flex items-center gap-5">
+    <h1 class="text text-3xl">Brand Logo</h1>
+    <nav>
+      <ul class="flex gap-3">
+        <li><a class="text-lg" href="#">Recipe</a></li>
+        <li><a class="text-lg" href="#">Shopping</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="left">
+    <ul>
+      <li class="relative">
+        <button type="button" (click)="toggleManage()">Manage</button>
+        <ul
+          *ngIf="manage"
+          class="absolute -bottom-24 -left-2 space-y-1 rounded bg-white px-4 py-1"
+        >
+          <li (click)="toggleManage()" class="cursor-pointer">item1</li>
+          <li (click)="toggleManage()" class="cursor-pointer">item2</li>
+          <li (click)="toggleManage()" class="cursor-pointer">item3</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
