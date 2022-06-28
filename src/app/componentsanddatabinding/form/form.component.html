@@ -1,0 +1,35 @@
+<header class="mx-auto my-0 max-w-7xl p-3">
+  <h2 class="mb-3 text-xl font-bold">Add new Servers or blueprints!</h2>
+  <div class="grid grid-cols-2 space-y-3">
+    <label class="w-full" for="name"> Server Name </label>
+    <!-- for this input, we are using two-way data-binding -->
+    <input
+      class="border border-gray-400"
+      id="name"
+      type="text"
+      [(ngModel)]="server"
+    />
+    <label class="w-full" for="content"> Some Content </label>
+    <!-- for this one, we are using local referance -->
+    <input
+      class="border border-gray-400"
+      type="text"
+      id="content"
+      #contentRef
+    />
+    <label class="w-full" for="desc"> Some description </label>
+    <!-- and for this one, we are using local referance but accessing it in ts code by ViewChild -->
+    <input class="border border-gray-400" type="text" id="desc" #descRef />
+    <div class="col-span-2 flex items-center justify-center gap-3">
+      <button class="rounded bg-red-500 p-3" (click)="addServer(contentRef)">
+        Add Server
+      </button>
+      <button
+        class="rounded bg-purple-500 p-3"
+        (click)="addBluePrint(contentRef)"
+      >
+        Add Blueprint
+      </button>
+    </div>
+  </div>
+</header>

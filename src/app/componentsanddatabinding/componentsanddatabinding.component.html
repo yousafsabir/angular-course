@@ -1,0 +1,10 @@
+<main class="mx-auto my-4 max-w-7xl p-3">
+  <app-form
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBluePrintAdded($event)"
+  ></app-form>
+  <app-server
+    *ngFor="let eelement of serverElements"
+    [theElement]="eelement"
+  ></app-server>
+</main>

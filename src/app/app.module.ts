@@ -10,9 +10,12 @@ import { DetailComponent } from './components/recipes/detail/detail.component';
 import { ShoppingListComponent } from './components/shopping/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './components/shopping/shopping-edit/shopping-edit.component';
 import { ShoppingComponent } from './components/shopping/shopping.component';
+import { ComponentsanddatabindingComponent } from './componentsanddatabinding/componentsanddatabinding.component';
+import { FormComponent } from './componentsanddatabinding/form/form.component';
+import { ServerComponent } from './componentsanddatabinding/server/server.component';
 
 @NgModule({
-  declarations: [AppComponent, ThebasicsComponent, HeaderComponent, RecipesComponent, ListComponent, DetailComponent, ShoppingListComponent, ShoppingEditComponent, ShoppingComponent],
+  declarations: [AppComponent, ThebasicsComponent, HeaderComponent, RecipesComponent, ListComponent, DetailComponent, ShoppingListComponent, ShoppingEditComponent, ShoppingComponent, ComponentsanddatabindingComponent, FormComponent, ServerComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
