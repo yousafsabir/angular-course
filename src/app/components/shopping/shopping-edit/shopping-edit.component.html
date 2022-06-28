@@ -1,1 +1,19 @@
-<p>shopping-edit works!</p>
+<div class="m-3 grid grid-cols-6 gap-2 p-3">
+  <div class="col-span-2">
+    <label for="name" class="w-full">Name</label>
+    <input
+      type="text"
+      id="name"
+      class="w-full rounded border border-gray-500"
+    />
+  </div>
+  <div>
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" class="rounded border border-gray-500" />
+  </div>
+  <div class="col-span-3 flex items-center justify-center gap-4">
+    <button class="rounded bg-emerald-600 p-2 text-white">Add</button>
+    <button class="rounded bg-red-600 p-2 text-white">Remove</button>
+    <button class="rounded bg-blue-600 p-2 text-white">Clear</button>
+  </div>
+</div>

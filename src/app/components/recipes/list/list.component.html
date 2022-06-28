@@ -1,7 +1,12 @@
-<div *ngFor="let recipe of recipes">
-  <p>{{ recipe.name }}</p>
-  <br />
-  <p>{{ recipe.description }}</p>
-  <br />
-  <img [src]="recipe.imgPath" alt="" />
+<div class="space-y-2 p-4">
+  <div
+    *ngFor="let recipe of recipes"
+    class="flex items-center justify-between rounded border border-gray-300 p-3"
+  >
+    <div>
+      <h3 class="text-2xl font-semibold">{{ recipe.name }}</h3>
+      <p class="text-lg text-gray-500">{{ recipe.description }}</p>
+    </div>
+    <img class="max-h-14" [src]="recipe.imgPath" alt="Recipe image" />
+  </div>
 </div>

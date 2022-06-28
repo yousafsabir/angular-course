@@ -1,1 +1,8 @@
-<p>shopping-list works!</p>
+<div class="grid grid-cols-1 gap-1">
+  <a
+    *ngFor="let ingredient of ingredients"
+    class="rounded border border-gray-300 p-2"
+  >
+    {{ ingredient.name }} ({{ ingredient.amount }})
+  </a>
+</div>

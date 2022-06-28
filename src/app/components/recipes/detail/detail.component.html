@@ -1,1 +1,30 @@
-<p>detail works!</p>
+<div class="p-3">
+  <img
+    src="https://www.kookingk.com/wp-content/uploads/2018/12/APC_0649_eb0c3fe8c75c4b93b35b9a387753f54f-2000x1125.jpg"
+    alt=""
+  />
+  <h2>Recipe Name</h2>
+  <ul>
+    <li class="relative">
+      <button
+        type="button"
+        class="my-1 rounded bg-blue-600 p-2 text-white"
+        (click)="toggleManage()"
+      >
+        Manage
+      </button>
+      <ul
+        *ngIf="manage"
+        class="absolute -bottom-24 left-0 space-y-1 rounded bg-white px-4 py-1"
+      >
+        <li (click)="toggleManage()" class="cursor-pointer">
+          to shopping list
+        </li>
+        <li (click)="toggleManage()" class="cursor-pointer">edit recipe</li>
+        <li (click)="toggleManage()" class="cursor-pointer">delete recipe</li>
+      </ul>
+    </li>
+  </ul>
+  <p>Description</p>
+  <p>Ingredients</p>
+</div>

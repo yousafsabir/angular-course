@@ -3,14 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class DetailComponent implements OnInit {
+  manage = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  toggleManage() {
+    this.manage = !this.manage;
   }
-
 }
