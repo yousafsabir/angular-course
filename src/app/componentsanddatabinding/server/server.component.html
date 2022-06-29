@@ -1,12 +1,4 @@
 <div class="mb-3 rounded border border-gray-300">
   <div class="border border-b-gray-300 bg-gray-500 p-3">{{ element.name }}</div>
-  <div
-    class="p-3"
-    [ngClass]="{
-      'text-xl font-bold text-red-500': element.type === 'server',
-      'text-xl italic text-blue-500': element.type === 'blueprint'
-    }"
-  >
-    {{ element.content }}, {{ element.desc }}
-  </div>
+  <ng-content></ng-content>
 </div>

@@ -3,8 +3,15 @@
     (serverCreated)="onServerAdded($event)"
     (blueprintCreated)="onBluePrintAdded($event)"
   ></app-form>
-  <app-server
-    *ngFor="let eelement of serverElements"
-    [theElement]="eelement"
-  ></app-server>
+  <app-server *ngFor="let eelement of serverElements" [theElement]="eelement">
+    <div
+      class="p-3"
+      [ngClass]="{
+        'text-xl font-bold text-red-500': eelement.type === 'server',
+        'text-xl italic text-blue-500': eelement.type === 'blueprint'
+      }"
+    >
+      {{ eelement.content }}, {{ eelement.desc }}
+    </div></app-server
+  >
 </main>
