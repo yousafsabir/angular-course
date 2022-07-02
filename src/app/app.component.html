@@ -1,7 +1,8 @@
-<!-- <app-header></app-header>
+<app-header (toggleEmit)="toggleVar = $event"></app-header>
 <div class="my-0 mx-auto min-h-screen max-w-7xl bg-slate-100">
-  <app-recipes></app-recipes>
-  <hr />
-  <app-shopping></app-shopping>
-</div> -->
-<app-componentsanddatabinding></app-componentsanddatabinding>
+  <app-recipes *ngIf="toggleVar"></app-recipes>
+  <hr *ngIf="toggleVar" />
+  <app-shopping *ngIf="!toggleVar"></app-shopping>
+  <hr *ngIf="!toggleVar" />
+</div>
+<!-- <app-componentsanddatabinding></app-componentsanddatabinding> -->

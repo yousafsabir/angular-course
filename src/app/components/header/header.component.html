@@ -4,8 +4,24 @@
       <h1 class="text text-3xl">Brand Logo</h1>
       <nav>
         <ul class="flex gap-3">
-          <li><a class="text-lg" href="#">Recipe</a></li>
-          <li><a class="text-lg" href="#">Shopping</a></li>
+          <li>
+            <a
+              class="text-lg"
+              [ngClass]="{ 'text-gray-900': toggle, 'text-gray-500': !toggle }"
+              (click)="onRecipe()"
+              href="#"
+              >Recipe</a
+            >
+          </li>
+          <li>
+            <a
+              class="text-lg"
+              (click)="onShopping()"
+              [ngClass]="{ 'text-gray-900': !toggle, 'text-gray-500': toggle }"
+              href="#"
+              >Shopping</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
