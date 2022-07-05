@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Recipe } from '../recipe.model';
 
 @Component({
   selector: 'app-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styles: [],
 })
 export class DetailComponent implements OnInit {
+  @Input() recipe!: Recipe;
+
   manage = false;
 
   constructor() {}

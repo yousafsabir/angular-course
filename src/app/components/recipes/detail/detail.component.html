@@ -1,9 +1,10 @@
 <div class="p-3">
   <img
-    src="https://www.kookingk.com/wp-content/uploads/2018/12/APC_0649_eb0c3fe8c75c4b93b35b9a387753f54f-2000x1125.jpg"
+    [src]="recipe.imgPath"
+    class="h-[400px] w-full object-cover object-center"
     alt=""
   />
-  <h2>Recipe Name</h2>
+  <h2>{{ recipe.name }}</h2>
   <ul>
     <li class="relative">
       <button
@@ -25,6 +26,6 @@
       </ul>
     </li>
   </ul>
-  <p>Description</p>
+  <p>{{ recipe.description }}</p>
   <p>Ingredients</p>
 </div>

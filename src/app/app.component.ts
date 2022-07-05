@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  toggleVar = true;
-  toggle() {
-    this.toggleVar = !this.toggleVar;
-  }
+  toggleVar = 'recipe';
 }

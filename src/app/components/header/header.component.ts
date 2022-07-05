@@ -5,15 +5,11 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
-  toggle = true;
+  toggle = 'recipe';
   @Output() toggleEmit = new EventEmitter();
 
-  onRecipe() {
-    this.toggle = true;
-    this.toggleEmit.emit(this.toggle);
-  }
-  onShopping() {
-    this.toggle = false;
+  onSelect(tab: string) {
+    this.toggle = tab;
     this.toggleEmit.emit(this.toggle);
   }
 

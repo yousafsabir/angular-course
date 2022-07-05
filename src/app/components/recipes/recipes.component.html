@@ -1,5 +1,13 @@
-<div class="grid grid-cols-12">
-  <app-list class="col-span-full md:col-span-5"></app-list>
-  <div class="h-full w-auto max-w-[1px] bg-gray-500"></div>
-  <app-detail class="col-span-full md:col-span-6"></app-detail>
+<div class="grid grid-cols-recipe gap-1">
+  <div class="col-span-full flex flex-col gap-2 p-4 md:col-span-5">
+    <app-list
+      *ngFor="let recipe of recipes; let i = index"
+      [index]="i"
+      [recipe]="recipe"
+      (emitIndex)="onRecipeChange($event)"
+    ></app-list>
+  </div>
+  <div class="h-full w-[1px] bg-gray-500"></div>
+  <app-detail class="col-span-full md:col-span-6" [recipe]="recipeDetail">
+  </app-detail>
 </div>

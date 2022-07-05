@@ -7,8 +7,11 @@
           <li>
             <a
               class="text-lg"
-              [ngClass]="{ 'text-gray-900': toggle, 'text-gray-500': !toggle }"
-              (click)="onRecipe()"
+              [ngClass]="{
+                'text-gray-900': toggle === 'recipe',
+                'text-gray-500': toggle !== 'recipe'
+              }"
+              (click)="onSelect('recipe')"
               href="#"
               >Recipe</a
             >
@@ -16,8 +19,11 @@
           <li>
             <a
               class="text-lg"
-              (click)="onShopping()"
-              [ngClass]="{ 'text-gray-900': !toggle, 'text-gray-500': toggle }"
+              (click)="onSelect('shopping')"
+              [ngClass]="{
+                'text-gray-900': toggle === 'shopping',
+                'text-gray-500': toggle !== 'shopping'
+              }"
               href="#"
               >Shopping</a
             >
